@@ -1,0 +1,35 @@
+[package]
+name = "token-factory"
+version = "2.0.0"
+edition = "2021"
+
+
+exclude = [
+  # Those files are rust-optimizer artifacts. You might want to commit them for convenience but they should not be part of the source code publication.
+  "contract.wasm",
+  "hash.txt",
+]
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+library = []
+
+[dependencies]
+# cw20-bonding = "0.11.1"
+cw20-bonding = { path = "../cw20-bonding" }
+cosmwasm-std = "2.0.0"
+cosmwasm_std_v1 = { package = "cosmwasm-std", version = "1.1.5" }
+# cosmwasm_helper = { path = "../cosmwasm_helper" }
+cw-storage-plus = "2.0.0"
+cosmwasm-storage = "1.5.2"
+cw0 = "0.10.3" 
+cw2 = "2.0.0"
+cw20 = "2.0.0"
+cw-controllers = "0.13.2"
+cw20-base = {  version = "2.0.0", features = ["library"] }
+cosmwasm-schema = "2.0.0"
+schemars = "0.8.8"
+serde = { version = "1.0.137", default-features = false, features = ["derive"] }
+thiserror = "1.0.31"
