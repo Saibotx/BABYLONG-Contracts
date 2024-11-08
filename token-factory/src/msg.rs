@@ -52,6 +52,7 @@ pub enum ExecuteMsg {
 pub enum QueryMsg {
     /* Returns the list of token addresses that were created with this contract */
     GetMintedTokens { },
+    GetConfig { },
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, PartialEq, JsonSchema)]
